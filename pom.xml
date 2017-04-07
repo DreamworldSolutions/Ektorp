@@ -4,7 +4,7 @@
     <artifactId>org.ektorp.parent</artifactId>
     <packaging>pom</packaging>
     <name>Ektorp Parent</name>
-    <version>1.4.5-SNAPSHOT</version>
+    <version>1.4.5-RC1</version>
     <description>a Java CouchDB persistence library</description>
     <scm>
         <connection>scm:git:git@github.com:helun/Ektorp.git</connection>
@@ -268,17 +268,15 @@
         </testResources>
     </build>
     <distributionManagement>
-        <snapshotRepository>
-            <id>sonatype-nexus-snapshots</id>
-            <name>Sonatype Nexus Snapshots</name>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
-        <repository>
-            <id>sonatype-nexus-staging</id>
-            <name>Nexus Release Repository</name>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
-        </repository>
-    </distributionManagement>
+    <repository>
+      <id>nexus-releases</id>
+      <url>http://nexus.dream-world.in/content/repositories/releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>nexus-snapshots</id>
+      <url>http://nexus.dream-world.in/content/repositories/snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
     <profiles>
         <profile>
             <id>release-sign-artifacts</id>
