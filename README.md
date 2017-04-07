@@ -1,4 +1,4 @@
-# Ektorp [![build status](https://secure.travis-ci.org/helun/Ektorp.png)](http://travis-ci.org/helun/Ektorp)
+# Ektorp [![build status](https://secure.travis-ci.org/helun/Ektorp.png)](http://travis-ci.org/helun/Ektorp) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.ektorp/org.ektorp/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.ektorp/org.ektorp)
 
 Ektorp is a persistence API that uses [CouchDB](http://couchdb.apache.org/) as storage engine. The goal of Ektorp is to combine JPA like functionality with the simplicity and flexibility that CouchDB provides.
 
@@ -13,6 +13,10 @@ Here are some good reasons why you should consider using Ektorp in your project:
 * *Spring Support.* Ektorp features an optional spring support module.
 * *Active development.* Ektorp is actively developed and has a growing community.
 * *Choice of abstraction level.* From full object-document mapping to raw streams, Ektorp will never stop you if you need to step down an abstraction level.
+
+Documentation
+-------------
+[API-Reference](https://helun.github.io/Ektorp/reference_documentation.html)
 
 Simple API
 ----------
@@ -198,7 +202,7 @@ data.close();
 
 Try it Out
 ------------
-### [Download binaries here](https://github.com/helun/Ektorp/downloads)
+### Download binaries from [maven repository](http://central.maven.org/maven2/org/ektorp/org.ektorp/)
 
 If you are using Maven:
 
@@ -206,7 +210,7 @@ If you are using Maven:
 <dependency>
     <groupId>org.ektorp</groupId>
     <artifactId>org.ektorp</artifactId>
-    <version>1.4.2</version>
+    <version>1.4.4</version>
 </dependency>
 ```
 
