@@ -4,7 +4,7 @@
 	<artifactId>org.ektorp</artifactId>
 	<packaging>jar</packaging>
 	<name>Ektorp</name>
-	<version>1.4.5-RC1</version>
+	<version>1.4.5-RC2</version>
 	<description>a Java CouchDB persistence library</description>
 	<parent>
 		<artifactId>org.ektorp.parent</artifactId>
