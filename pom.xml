@@ -4,7 +4,7 @@
     <artifactId>org.ektorp.parent</artifactId>
     <packaging>pom</packaging>
     <name>Ektorp Parent</name>
-    <version>1.5.1-RC1</version>
+    <version>1.5.1-amalto</version>
     <description>a Java CouchDB persistence library</description>
     <scm>
         <connection>scm:git:git@github.com:helun/Ektorp.git</connection>
@@ -52,14 +52,13 @@
     <properties>
         <slf4j.version>1.6.4</slf4j.version>
         <log4j.version>1.2.13</log4j.version>
-        <mockito.version>1.8.5</mockito.version>
-        <mockito.version>1.8.5</mockito.version>
+        <mockito.version>1.10.19</mockito.version>
         <junit.version>4.8.2</junit.version>
         <joda.time.version>2.3</joda.time.version>
-        <jackson.version>2.10.2</jackson.version>
+        <jackson.version>2.11.1</jackson.version>
         <spring.version>3.1.1.RELEASE</spring.version>
-        <commons.io.version>2.0.1</commons.io.version>
-        <httpclient.version>4.3</httpclient.version>
+        <commons.io.version>2.4</commons.io.version>
+        <httpclient.version>4.5.9</httpclient.version>
         <aspectj.version>1.6.9</aspectj.version>
         <maven-gpg-plugin.version>1.6</maven-gpg-plugin.version>
 
@@ -269,15 +268,20 @@
         </testResources>
     </build>
     <distributionManagement>
-      <repository>
-        <id>nexus-releases</id>
-        <url>http://nexus.dream-world.in/content/repositories/releases</url>
-      </repository>
-      <snapshotRepository>
-        <id>nexus-snapshots</id>
-        <url>http://nexus.dream-world.in/content/repositories/snapshots</url>
-      </snapshotRepository>
-  </distributionManagement>
+
+        <repository>
+            <id>amalto-release-repo</id>
+            <name>Amalto Releases Repository</name>
+            <url>http://nexus3.amalto.com/repository/releases</url>
+        </repository>
+
+        <snapshotRepository>
+            <id>amalto-snapshot-repo</id>
+            <name>Amalto Snapshots Repository</name>
+            <url>http://nexus3.amalto.com/repository/snapshots</url>
+        </snapshotRepository>
+
+    </distributionManagement>
     <profiles>
         <profile>
             <id>release-sign-artifacts</id>

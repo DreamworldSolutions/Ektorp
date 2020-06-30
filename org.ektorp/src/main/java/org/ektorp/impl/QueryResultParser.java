@@ -72,7 +72,12 @@ public class QueryResultParser<T> {
         while (jp.nextValue() != JsonToken.END_OBJECT) {
             String currentName = jp.getCurrentName();
             if (OFFSET_FIELD_NAME.equals(currentName)) {
-                offset = jp.getLongValue();
+                // Work-a-round for CouchDB issue: #1648 ("offset":null)
+                if(null == jp.getCurrentValue()){
+                    offset = 0;
+                } else {
+                    offset = jp.getLongValue();
+                }
             } else if (TOTAL_ROWS_FIELD_NAME.equals(currentName)) {
                 totalRows = jp.getIntValue();
             } else if (ROWS_FIELD_NAME.equals(currentName)) {
