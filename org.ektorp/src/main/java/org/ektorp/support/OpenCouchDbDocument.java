@@ -22,29 +22,8 @@ public class OpenCouchDbDocument extends CouchDbDocument {
 	/**
 	 * @return a Map containing fields that did not map to any other field in the class during object deserializarion from a JSON document.
 	 */
-	@JsonAnyGetter
 	public Map<String, Object> getAnonymous() {
-		return anonymous();
-	}
-
-	/**
-	 *
-	 * @param key
-	 * @param value
-	 */
-	@JsonAnySetter
-	public void setAnonymous(String key, Object value) {
-		anonymous().put(key, value);
-	}
-	/**
-	 * Provides lay init for the anonymous Map
-	 * @return
-	 */
-	private Map<String, Object> anonymous() {
-		if (anonymous == null) {
-			anonymous = new HashMap<String, Object>();
-		}
-		return anonymous;
+		return super.extraFields();
 	}
 
 }
